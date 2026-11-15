@@ -1,10 +1,13 @@
-x = seq(-pi,pi, by=0.2)
-y = sin(x)
-z = cos(x)
-plot(x,y)
+# Basic plotting in R
+x <- seq(-pi,pi, by=0.2)
+y <- sin(x)
+z <- cos(x)
+plot(x,y) # Simple plots
 plot(x,y,pch=".")
 plot(x,y,pch="*")
 plot(x,y,col="red")
+
+# Add lines and points to the same plot
 lines(x,y,col="green")
 points(x,y,col="yellow")
 lines(x,y,col="green")
@@ -21,18 +24,19 @@ dev.off()
 
 
 # Arrays and Matrices
-x = c(2,5,8,3,8) # vectors
-y = c(1,1,1,1,1)
-z = c(5,4,3,2,1)
+x <- c(2,5,8,3,8) # vectors
+y <- c(1,1,1,1,1)
+z <- c(5,4,3,2,1)
 
-M = c(x,y,z)
+M <- c(x,y,z)
 print(M)
 
-dim(M)=c(5,3) # You can change that by defining the dimension of M
+dim(M) <- c(5,3) # You can change that by defining the dimension of M
 print(M)
 
+# Accessing matrix elements
 print(M[1,3]) # Prints the value of the 1st row and 3rd Column
-M[1,3] = 1000 # The value in the 1st row and 3rd column is set to 1000
+M[1,3] <- 1000 # The value in the 1st row and 3rd column is set to 1000
 M[1,] # Prints the complete first row
 print(M)
 
